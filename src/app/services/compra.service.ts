@@ -14,6 +14,8 @@ export class CompraService {
   constructor(private http: HttpClient) { }
 
   getCompras(): Observable<any>{
-    return this.http.get('this.myAppUrl + this.myApiUrl');
+
+    const url = this.myAppurl+this.myApiUrl;
+    return this.http.get(url);
   }
 }
